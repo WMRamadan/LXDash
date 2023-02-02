@@ -5,7 +5,8 @@ A Dashboard for LXD/LXC
 ## Requirements
 
 - Python3
-- Pip3
+- python3-virtualenv
+- python3-pip
 
 ## Setup
 
