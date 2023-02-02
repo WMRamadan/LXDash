@@ -7,6 +7,7 @@ A Dashboard for LXD/LXC
 - Python3
 - python3-virtualenv
 - python3-pip
+- lxd/lxc
 
 ## Setup
 
