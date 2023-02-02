@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+<title>{% block title %}LXDash - Instance{% endblock %}</title>
+{% block content %}
+{% load instance_extras %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Key</th>
+        <th scope="col">Value</th>
+      </tr>
+    </thead>
+{% if detail_data %}
+    <tbody>
+    {% for key, value in detail_data %}
+        <tr>
+            <th scope="row">{{ key }}</th>
+            <td>{{ value }}</td>
+    {% endfor %}
+    </tbody>
+{% else %}
+    <p>No detail is available.</p>
+{% endif %}
+</table>
+{% endblock %}

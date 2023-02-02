@@ -12,3 +12,12 @@ def index(request):
         'latest_instance_list': latest_instance_list,
     }
     return HttpResponse(template.render(context, request))
+
+def get_instance(request, name):
+    lxdash = LXDash()
+    detail_data = lxdash.get_instance_by_name(name=name)
+    template = loader.get_template('instances/detail.html')
+    context = {
+        'detail_data': detail_data,
+    }
+    return HttpResponse(template.render(context, request))

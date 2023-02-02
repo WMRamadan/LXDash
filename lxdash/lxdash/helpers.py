@@ -12,3 +12,7 @@ class LXDash():
     def get_client_resources(self):
         resources = self.client.resources
         return resources
+
+    def get_instance_by_name(self, name: str):
+        instance = self.client.instances.get(name)
+        return instance

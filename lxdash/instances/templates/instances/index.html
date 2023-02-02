@@ -15,8 +15,8 @@
     <tbody>
     {% for instance in latest_instance_list %}
         <tr>
-            <th scope="row"><a href="/instances/{{ instance.config|get_value:'volatile.uuid' }}/">{{ instance.config|get_value:'volatile.uuid' }}</a></th>
-            <td>{{ instance.name }}</td>
+            <th scope="row"><a href="/instances/id/{{ instance.config|get_value:'volatile.uuid' }}/">{{ instance.config|get_value:'volatile.uuid' }}</a></th>
+            <td><a href="/instances/{{ instance.name }}/">{{ instance.name }}</a></td>
             <td>{{ instance.type }}</td>
             <td>{{ instance.status }}</td>
     {% endfor %}
